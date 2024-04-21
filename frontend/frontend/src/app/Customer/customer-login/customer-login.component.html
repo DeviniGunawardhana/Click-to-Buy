@@ -1,0 +1,30 @@
+
+<div class="container" id="container">
+  <div class="form-container sign-up-container">
+    <a (click)="openDialog1()"  class="sing-form" style="margin-top: 40px">Sing In</a>
+    <form [formGroup]="addCustomer">
+      <h1>Create Account</h1>
+      <div class="social-container">
+        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+
+      <span>or use your email for registration</span>
+
+      <mat-form-field appearance="outline" style="width: 300px">
+        <mat-label>User Name</mat-label>
+        <input  type="text" matInput placeholder="User Name" formControlName="customerName" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline" style="width: 300px">
+        <mat-label>Password</mat-label>
+        <input  type="password" matInput placeholder="Password" formControlName="customerPassword" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline" style="width: 300px">
+        <mat-label>E-mail</mat-label>
+        <input  type="email" matInput placeholder="E-mail" formControlName="customerEmail" required>
+      </mat-form-field>
+      <button (click)="onSubmit()">Sign Up</button>
+    </form>
+  </div>
+</div>

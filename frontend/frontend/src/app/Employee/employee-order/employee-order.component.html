@@ -1,0 +1,67 @@
+
+<mat-drawer-container style="margin-top: -50px">
+    <mat-drawer mode="side" [opened]="sideBarOpen">
+        <app-employee-nav></app-employee-nav>
+    </mat-drawer>
+    <mat-drawer-content>
+        <app-employee-header (toggleSidebarForMe)="sideBarToggler()"></app-employee-header>
+
+        <div class="container-fluid page">
+            <div class="d-flex page__box p-3 mt-2">Order List</div>
+            <div class="page__content shadow p-3 position-relative">
+                <div class="page__content-data position-absolute ">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="search">
+                                <input type="text" placeholder="Search Library Member "
+                                       [(ngModel)]="searchText"
+                                >
+
+
+                            </div>
+
+
+
+                            <div class="header">Orders</div>
+
+                            <table >
+                                <tr>
+
+                                    <th>ORDER ID</th>
+                                    <th>CUSTOMER ID</th>
+                                    <th>EMPLOYEE ID</th>
+                                    <th>DATE</th>
+                                    <th>TOTAL</th>
+                                </tr>
+                                <tr *ngFor="let item of order |filter:searchText | paginate:{itemsPerPage:7, currentPage:page, totalItems:totalLength}">
+
+                                    <td >{{item.orderId}}</td>
+                                    <td >{{item.customerId}}</td>
+                                    <td > {{item.employeeId}}</td>
+                                    <td >{{item.date}}</td>
+                                    <td>{{item.total}}</td>
+
+
+
+
+                                    <td >
+
+                                </tr>
+
+
+                            </table>
+                            <br>
+                            <pagination-controls class="text-center" (pageChange)="page = $event" ></pagination-controls>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </mat-drawer-content>
+</mat-drawer-container>
+
+

@@ -1,0 +1,259 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$lms-primary: mat.define-palette(mat.$indigo-palette);
+$lms-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$lms-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$lms-theme: mat.define-light-theme((
+  color: (
+    primary: $lms-primary,
+    accent: $lms-accent,
+    warn: $lms-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($lms-theme);
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+body {
+  color: #353535;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  background: #f3f6ff;
+}
+
+a {
+  color: #367c31;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #353535;
+  outline: none;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 900;
+}
+
+h2 {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 700;
+}
+
+.brand-slider{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media(min-width: 992px) {
+  .container-fluid {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.btn-dialog-close{
+  width: 45px;
+  min-width: 0px !important;
+  height: 40px;
+  padding: 0px !important;
+}
+
+/* mat-confirm-dialog (customised dialog) */
+.confirm-dialog-container .mat-dialog-container {
+  border-radius: .25em .25em .4em .4em;
+  padding: 0px;
+}
+.confirm-dialog-container .content-container{
+  margin: 5px 5px 15px 5px;
+  color: #8f9cb5;
+  display: flex;
+}
+.confirm-dialog-container #close-icon{
+  margin-left: auto;
+  order: 2;
+  font-weight: bolder;
+}
+.confirm-dialog-container #close-icon:hover{
+  cursor: pointer;
+}
+
+.confirm-dialog-container #no-button{
+  height: 50px;
+  width: 50%;
+  background-color: #fc7169;
+  color:white;
+  border-radius: 0px;
+}
+
+.confirm-dialog-container #yes-button{
+  height: 50px;
+  width: 50%;
+  background-color: #b6bece;
+  color:white;
+  border-radius: 0px;
+}
+
+.confirm-dialog-container span.content-span{
+  padding:  35px 16px;
+  text-align: center;
+  font-size: 20px;
+}
+
+/*!
+ *  N & LW Lawn Care - Landscaping Bootstrap4 HTML5 Responsive Template
+ */
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800');
+
+body {
+  padding-top: 54px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #4e3914;
+}
+
+
+
+
+/* ---- All Pages CSS ---- */
+
+
+
+
+
+
+
+.contact-left h3{
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.contact-right h3{
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.contact-right p abbr{
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.help-block ul{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  background: red;
+  color: #fff;
+  padding: 0px 15px;
+}
+
+
+@media (min-width:768px) and (max-width:991px){
+  .navbar-expand-lg.top-nav .navbar-nav .nav-link.dropdown-toggle::after{
+    position: absolute;
+    top: 18px;
+    right: 6px;
+  }
+}
+
+@media screen and (max-width:767px){
+  .navbar-expand-lg.top-nav .navbar-nav .nav-link.dropdown-toggle::after{
+    position: absolute;
+    top: 18px;
+    right: 6px;
+  }
+  .portfolio-main h2{
+    text-align: center;
+  }
+  .customers-box{
+    text-align: center;
+  }
+  .team-members-box h2{
+    text-align: center;
+  }
+  .services-bar h1{
+    text-align: center;
+  }
+  .social_footer_ul li{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .faq-main{
+    padding: 20px 15px;
+  }
+  .accordion-single .card-header h5 a{
+    font-size: 14px;
+  }
+}
+
+@media (min-width:320px) and (max-width:575.98px){
+  .navbar-expand-lg.top-nav .navbar-nav .nav-link.dropdown-toggle::after{
+    position: absolute;
+    top: 18px;
+    right: 6px;
+  }
+  .portfolio-main h2{
+    text-align: center;
+  }
+  .customers-box{
+    text-align: center;
+  }
+  .team-members-box h2{
+    text-align: center;
+  }
+  .services-bar h1{
+    text-align: center;
+  }
+
+  .faq-main{
+    padding: 20px 15px;
+  }
+  .accordion-single .card-header h5 a{
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,72 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="title">Registration</div>
+    <div style="margin-top: 15px">
+        <h3>***You should add business owner's details</h3></div>
+    <div class="content">
+        <form action="#" [formGroup]="editEmployee" >
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Full Name</span>
+                    <input type="text" placeholder="Enter name" formControlName="employeeName" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">User Name</span>
+                    <input type="text" placeholder="Enter username" formControlName="userName" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="text" placeholder="Enter email" formControlName="employeeEmail" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Phone Number</span>
+                    <input type="text" placeholder="Enter number" formControlName="employeeNumber" required>
+                </div>
+
+                <div class="input-box">
+                    <span class="details">Password</span>
+                    <input type="text" placeholder="Enter password" formControlName="employeePassword" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Confirm Password</span>
+                    <input type="text" placeholder="Confirm  password" formControlName="confirmPassword" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Address</span>
+                    <input type="text" placeholder="Enter Address" formControlName="employeeAddress" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Business Name</span>
+                    <input type="text" placeholder="Enter business Name" formControlName="businessName" required>
+                </div>
+
+                <div class="input-box">
+                    <span class="details">NIC Number</span>
+                    <input type="text" placeholder="Enter NIC number" formControlName="nic" required>
+                </div>
+                <div class="input-box">
+
+                    <mat-label>Business Type</mat-label>
+                    <select matNativeControl required formControlName="businessType">
+                        <option value="Pottery">Cloths</option>
+                        <option value="Gift Item">Gift Item</option>
+                        <option value="Food and Beverages">Food </option>
+                        <option value="Handicraft">Handicraft</option>
+                        <option value="Leather Product">Leather Product</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="button">
+                <input type="submit" (click)="onSubmit()" value="Register">
+            </div>
+        </form>
+    </div>
+</div>
+

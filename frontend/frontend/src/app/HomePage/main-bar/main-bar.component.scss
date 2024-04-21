@@ -1,0 +1,165 @@
+/**********************************/
+/*********** Header CSS ***********/
+/**********************************/
+.header {
+  position: relative;
+}
+
+.header .col-md-3,
+.header .col-md-6 {
+  margin-bottom: 30px;
+}
+
+.header .navbar {
+  padding: 0;
+  height: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  background: #ffffff !important;
+  border-radius: 25px;
+}
+
+.header .navbar-nav {
+  width: 100%;
+  padding: 15px 0;
+
+
+}
+
+.header .navbar li {
+  padding: 0 30px;
+  border-bottom: 1px solid #f3f6ff;
+  border-radius: 20px;
+  position: relative;
+  margin: 2px;
+}
+
+.header .navbar li:last-child {
+  border-bottom: none;
+}
+
+.header .navbar a {
+  color: #040444;
+  position: relative;
+
+
+}
+.header .navbar a:hover {
+  color: rgb(244,69,21);
+}
+
+
+.header .navbar i{
+  color: rgba(39,48,67,255);
+  width: 20px;
+  text-align: center;
+  margin-right: 8px;
+
+}
+
+.header .navbar a:hover i {
+  color: rgb(244,69,21);
+}
+
+.header-slider {
+  position: relative;
+  width: 100%;
+}
+
+.header-slider .header-slider-item {
+  position: relative;
+}
+
+.header-slider .header-slider-item img {
+  width: 100%;
+  height: 400px;
+}
+
+.header-slider .header-slider-captions {
+  position: absolute;
+  top: 20%;
+  color: whitesmoke;
+  font-weight: bolder;
+  font-size: 42px;
+  left: 15%;
+  width: 60%;
+  height: 60%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  z-index: 1;
+}
+
+.header-slider .header-slider-caption p {
+  text-align: center;
+  color: #ffffff;
+  font-size: 22px;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 700;
+}
+
+.header-slider .header-slider-caption .btn {
+  border-color: #ffffff;
+}
+
+.header-slider .header-slider-caption .btn i {
+  margin-right: 5px;
+}
+
+.header .header-img {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.header .img-item {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+
+.header .img-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header .img-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background: rgba(244, 69, 21, 0.37);
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.header .img-text:hover {
+  opacity: 1;
+}
+
+.header .img-text p {
+  margin: 0 0 50px 0;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.header .img-text:hover p {
+  margin: 0;
+}

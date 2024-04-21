@@ -1,0 +1,73 @@
+
+<mat-drawer-container style="margin-top: -50px">
+    <mat-drawer mode="side" [opened]="sideBarOpen">
+        <app-admin-nav></app-admin-nav>
+    </mat-drawer>
+    <mat-drawer-content>
+        <app-admin-header (toggleSidebarForMe)="sideBarToggler()"></app-admin-header>
+
+        <div class="container-fluid page">
+            <div class="d-flex page__box p-3 mt-2">Employee List</div>
+            <div class="page__content shadow p-3 position-relative">
+                <div class="page__content-data position-absolute ">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="search">
+                                <input type="text" placeholder="Search"
+                                       [(ngModel)]="searchText"
+                                >
+
+
+                            </div>
+
+
+
+                            <div class="header">Order Details</div>
+
+                            <table >
+                                <tr>
+
+                                    <th>ORDER ID</th>
+                                    <th>CUSTOMER ID</th>
+                                    <th>EMPLOYEE ID</th>
+                                    <th>DATE</th>
+                                    <th>TOTAL</th>
+
+                                </tr>
+                                <tr *ngFor="let customer of order |filter:searchText | paginate:{itemsPerPage:7, currentPage:page, totalItems:totalLength}">
+
+                                    <td >{{customer.orderId}}</td>
+                                    <td >{{customer.customerId}}</td>
+                                    <td>{{customer.employeeId}}</td>
+                                    <td >{{customer.date}}</td>
+                                    <td >{{customer.total}}</td>
+
+
+
+                                    <td >
+<!--                                        <a href ="/editStudent/{{customer.customerId}}" class="btn btn-success">-->
+<!--                                            EDIT-->
+<!--                                        </a>|-->
+<!--                                        <button (click)="deleteCustomer(customer.customerId)"  class="btn btn-danger">DELETE</button> </td>-->
+                                    <!--                  <button (click)= "deleteEmployee(employee.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>-->
+
+                                </tr>
+
+
+                            </table>
+                            <br>
+                            <pagination-controls class="text-center" (pageChange)="page = $event" ></pagination-controls>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </mat-drawer-content>
+</mat-drawer-container>
+
+
+

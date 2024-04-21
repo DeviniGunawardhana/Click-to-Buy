@@ -1,0 +1,42 @@
+p {
+  font-family: Lato;
+}
+.clock-container{
+
+  font-size:35px;
+  /*line-height:25px;*/
+  color:white;
+  padding-top: 20px;
+  align-items: center;
+  height:100%;
+  font-weight: 500;
+
+
+}
+.clock, .clock2 {
+ // top:30%;
+ // background-color: #3c434c;
+
+ // margin:10px auto;
+  //padding:30px;
+}
+.clock div, .clock2 div {
+  display:inline-block;
+  background-color: #202731;
+  padding: inherit;
+  //width:25%;
+  //height: 100%;
+  text-align: center;
+}
+.clock2 {
+  position: center;
+ // background-color: #cdd5dc;
+}
+.time{
+  margin: 20px;
+  width:200px !important;
+  height: 80px !important;
+}
+:host{
+  font-family: Orbitron;
+}

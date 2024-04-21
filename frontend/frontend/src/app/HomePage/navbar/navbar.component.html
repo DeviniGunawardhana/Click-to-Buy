@@ -1,0 +1,40 @@
+
+<div class="nav fixed-top" >
+
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+      <a href="#" class="navbar-brand">MENU</a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+        <div class="navbar-nav mr-auto">
+          <a routerLink="/" routerLinkActive="" class=" nav-link" >Home</a>
+
+          <a routerLink="/product" routerLinkActive="active" class=" nav-link">Products</a>
+          <a routerLink="/productDetail" routerLinkActive="active" class=" nav-link">Product Detail</a>
+          <a routerLink="/cart" routerLinkActive="active"  class=" nav-link">Cart</a>
+          <a routerLink="/check-out" routerLinkActive="active" class=" nav-link">Checkout</a>
+          <a routerLink="/aboutUs" routerLinkActive="active" class=" nav-link"> Contact Us</a>
+
+        </div>
+        <div class="navbar-nav ml-auto">
+          <div >
+            <a [matMenuTriggerFor]="menu" class=" nav-link" routerLinkActive="active"><mat-icon  >account_circle</mat-icon></a>
+            <mat-menu #menu="matMenu" style="background-color: #3f2b07">
+              <a class="button"  mat-menu-item (click)="openDialog()" >Customers</a>
+              <a class="button" routerLink="/employeeLogin" routerLinkActive="active"  mat-menu-item>Employee</a>
+              <a class="button"  routerLink="/adminLogin" routerLinkActive="active" mat-menu-item>Admin</a>
+            </mat-menu>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+
+

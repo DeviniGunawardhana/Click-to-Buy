@@ -1,0 +1,97 @@
+
+/**********************************/
+/*********** Nav Bar CSS **********/
+/**********************************/
+.nav {
+  //position: relative;
+  width: 100%;
+
+
+}
+
+@media (min-width: 992px) {
+  .nav .container-fluid {
+    padding-left: 60px;
+    padding-right: 52px;
+  }
+}
+
+.nav .navbar {
+  height: 100%;
+  padding: 2px;
+}
+
+.nav .dropdown-menu {
+  margin-top: 3px;
+  border: 0;
+  border-radius: 0;
+  background: rgba(39,48,67,255);
+}
+
+.nav .dropdown-menu a.active {
+  color: #353535;
+  background: #f8f9fa;
+}
+
+@media (min-width: 768px) {
+  .nav,
+  .nav .navbar {
+    background: rgba(39,48,67,255) !important;
+  }
+
+  .nav .navbar-brand {
+    display: none;
+  }
+
+  .nav .navbar-dark a.nav-link {
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  .nav .navbar-dark a.nav-link:hover,
+  .nav .navbar-dark a.nav-link.active {
+    color:rgba(246,64,16,255);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 8px 0;
+  }
+
+  .nav,
+  .nav .navbar {
+    background: rgba(246,64,16,255)!important;
+  }
+
+  .nav a.nav-link {
+    padding: 6px 0;
+  }
+
+  .nav .dropdown-menu {
+    box-shadow: none;
+  }
+}
+
+
+button{
+  position: relative;
+  top: -5px;
+  bottom: 0;
+  background-color: rgba(39,48,67,255);
+  border: 1px solid white;
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+
+}
+.button:hover{
+  color: rgba(246,64,16,255);
+  background-color:rgba(39,48,67,255);
+  cursor: pointer;
+}
+
+mat-icon:hover{
+  cursor: pointer;
+}

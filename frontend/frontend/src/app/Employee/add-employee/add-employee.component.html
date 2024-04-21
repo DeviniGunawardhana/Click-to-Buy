@@ -1,0 +1,97 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="title">Registration</div>
+  <div style="margin-top: 15px">
+  <h3>***You should add business owner's details</h3></div>
+  <div class="content">
+    <form action="#" [formGroup]="addEmployee" >
+      <div class="user-details">
+        <div class="input-box">
+          <span class="details">Full Name</span>
+          <input type="text" placeholder="Enter name" formControlName="employeeName" required>
+        </div>
+        <div class="input-box">
+          <span class="details">User Name</span>
+          <input type="text" placeholder="Enter username" formControlName="userName" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Email</span>
+          <input type="text" placeholder="Enter email" formControlName="employeeEmail" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Phone Number</span>
+          <input type="text" placeholder="Enter number" formControlName="employeeNumber" required>
+        </div>
+
+        <div class="input-box">
+          <span class="details">Password</span>
+          <input type="text" placeholder="Enter password" formControlName="employeePassword" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Confirm Password</span>
+          <input type="text" placeholder="Confirm  password" formControlName="confirmPassword" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Address</span>
+          <input type="text" placeholder="Enter Address" formControlName="employeeAddress" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Business Name</span>
+          <input type="text" placeholder="Enter business Name" formControlName="businessName" required>
+        </div>
+
+        <div class="input-box">
+          <span class="details">NIC Number</span>
+          <input type="text" placeholder="Enter NIC number" formControlName="nic" required>
+        </div>
+
+
+<!--        <input type="radio" name="Male" id="dot-1" formControlName="Male">-->
+<!--        <input type="radio" name="Female" id="dot-2" formControlName="Female">-->
+<!--        <input type="radio" name="Other" id="dot-3" formControlName="Other">-->
+<!--        <span class="gender-title">Gender</span>-->
+<!--        <div class="category">-->
+<!--          <label for="dot-1">-->
+<!--            <span class="dot one"></span>-->
+<!--            <span class="Male">Male</span>-->
+<!--          </label>-->
+<!--          <label for="dot-2">-->
+<!--            <span class="dot two"></span>-->
+<!--            <span class="Female">Female</span>-->
+<!--          </label>-->
+<!--          <label for="dot-3">-->
+<!--            <span class="dot three"></span>-->
+<!--            <span class="Other">Prefer not to say</span>-->
+<!--          </label>-->
+
+
+          <div class="input-box">
+<!--          <label for="membership" class="details">Choose a Business Type:</label>-->
+<!--          <select name="membership" id="membership" style="width: 130px; margin: 15px; height: 35px" formControlName="businessType">-->
+<!--            <option value="free">Free</option>-->
+<!--            <option value="bronze">Bronze</option>-->
+<!--            <option value="silver" selected>Silver</option>-->
+<!--            <option value="Gold">Gold</option>-->
+<!--          </select>-->
+
+            <mat-label>Business Type</mat-label>
+            <select matNativeControl required formControlName="businessType">
+              <option value="Pottery">Pottery</option>
+              <option value="Cloths">Cloths</option>
+              <option value="Gift Item">Gift Item</option>
+              <option value="Food and Beverages">Food </option>
+              <option value="Handicraft">Handicraft</option>
+              <option value="Leather Product">Leather Product</option>
+              <option value="Other">Other</option>
+            </select>
+      </div>
+  </div>
+
+      <div class="button">
+        <input type="submit"  class="btn btn-success" (click)="onSubmit()"  value="Register">
+      </div>
+    </form>
+  </div>
+</div>
+

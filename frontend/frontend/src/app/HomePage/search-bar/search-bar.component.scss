@@ -1,0 +1,62 @@
+.bottom-bar {
+  padding: 15px 0;
+  background: #ffffff;
+  margin-bottom: 30px;
+}
+
+.bottom-bar .logo {
+  text-align: left;
+  overflow: hidden;
+}
+
+.bottom-bar .logo a img {
+  height: 80px;
+  width: 80px;
+}
+
+
+.bottom-bar .user {
+  font-size: 0;
+  text-align: right;
+}
+
+.bottom-bar .user .wishlist {
+  margin-right: 15px;
+}
+
+.bottom-bar .user .cart i,
+.bottom-bar .user .wishlist i {
+  color: rgba(39,48,67,255);
+}
+
+.bottom-bar .user .cart span,
+.bottom-bar .user .wishlist span {
+  color: rgba(39,48,67,255);
+  font-size: 15px;
+}
+
+.bottom-bar .user .cart:hover i,
+.bottom-bar .user .wishlist:hover i,
+.bottom-bar .user .cart:hover span,
+.bottom-bar .user .wishlist:hover span {
+  color:  rgba(246,64,16,255);
+}
+
+@media (min-width: 768px) {
+  .bottom-bar {
+    max-height: 90px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .bottom-bar .logo,
+  .bottom-bar .search,
+  .bottom-bar .user {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .bottom-bar .user {
+    margin-bottom: 0;
+  }
+}

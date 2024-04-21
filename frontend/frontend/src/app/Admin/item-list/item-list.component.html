@@ -1,0 +1,75 @@
+
+<mat-drawer-container style="margin-top: -50px">
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <app-admin-nav></app-admin-nav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-admin-header (toggleSidebarForMe)="sideBarToggler()"></app-admin-header>
+
+    <div class="container-fluid page">
+      <div class="d-flex page__box p-3 mt-2">Item List</div>
+      <div class="page__content shadow p-3 position-relative">
+        <div class="page__content-data position-absolute ">
+
+          <div class="container">
+            <div class="row">
+              <div class="search">
+                <input type="text" placeholder="Search"
+                       [(ngModel)]="searchText"
+                >
+
+
+              </div>
+
+
+
+              <div class="header">Items</div>
+
+              <table >
+                <tr>
+                  <th>Image</th>
+                  <th>Item Name</th>
+                  <th>Shop Name</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Business Name</th>
+
+                  <th>Item Type</th>
+                  <th>Edit Delete</th>
+                </tr>
+                <tr *ngFor="let item of item |filter:searchText | paginate:{itemsPerPage:4, currentPage:page, totalItems:totalLength}">
+                  <td><img src="{{item.image}}" alt=""></td>
+                  <td >{{item.itemName}}</td>
+                  <td >{{item.shopName}}</td>
+                  <td >${{item.price}}</td>
+                  <td >{{item.quantity}}</td>
+                  <td >{{item.shopName}}</td>
+                  <td>{{item.itemType}}</td>
+
+
+
+
+                  <td >
+                    <a href ="/editStudent/{{item._id}}" class="btn btn-success">
+                      EDIT
+                    </a>|
+                    <button  class="btn btn-danger" (click)="deleteItem(item.itemId)">DELETE</button> </td>
+
+                </tr>
+
+
+              </table>
+              <br>
+              <pagination-controls class="text-center" (pageChange)="page = $event" ></pagination-controls>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </mat-drawer-content>
+</mat-drawer-container>
+
+
